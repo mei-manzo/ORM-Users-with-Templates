@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">   
+    <title>Users</title>
+</head>
+<body>
+    <h1>All Users</h1>
+    <ul>
+    {% for user in some_data %}
+        <li>{{user.id}} {{user.first_name}} {{user.last_name}} {{user.email_address}}{{user.age}}</li> <!--object.object type-->
+    {% endfor %}
+    </ul>
+    <h1>Add a User</h1>
+    <form action="/redirect" method='POST'>
+        {% csrf_token %}
+        <br>
+        <label for="first_name">First name:</label>
+        <input class="first_name" type="text" name = "first_name">
+        <br><br>
+        <br>
+        <label for="last_name">Last name:</label>
+        <input class="last_name" type="text" name = "last_name">
+        <br><br>
+        <label for="email">Email:</label>
+        <input class="email" type="text" name = "email">
+        <br><br>
+        <label for="age">Age:</label>
+        <input class="age" type="text" name = "age">
+        <br><br>
+        <input type="submit" value="Add" id = "button">
+    </form>
+</body>
+</html> 
