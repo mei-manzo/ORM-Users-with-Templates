@@ -9,7 +9,7 @@
     <title>Users</title>
 </head>
 <body>
-    <h1>All Users</h1>
+    <h1 class="all">All Users</h1>
     <table>
         <thead>
             <tr>
@@ -30,24 +30,19 @@
             {% endfor %}
         </tbody>
     </table>
-    <h1>Add a User</h1>
-    <form action="/redirect-page" method='POST'>
+    <hr>
+    <h1 class="add">Add a User</h1>
+    <form action="/redirect-page" method='POST' class="form">
         {% csrf_token %}
         {{ form }}
-        <br>
         <label for="first_name">First name:</label>
-        <input class="first_name" type="text" name = "first_name">
-        <br><br>
-        <br>
+        <input class="names" type="text" name = "first_name">
         <label for="last_name">Last name:</label>
-        <input class="last_name" type="text" name = "last_name">
-        <br><br>
+        <input class="names" type="text" name = "last_name">
         <label for="email">Email:</label>
-        <input class="email" type="text" name = "email">
-        <br><br>
+        <input class="other" type="text" name = "email">
         <label for="age">Age:</label>
-        <input class="age" type="text" name = "age">
-        <br><br>
+        <input class="other" type="text" name = "age">
         <input type="submit" value="Add" id = "button">
     </form>
 </body>

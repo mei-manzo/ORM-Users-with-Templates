@@ -1,0 +1,20 @@
+table, th, td {
+    padding: 10px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+table{
+    margin-left: 570px;
+}
+
+hr {
+    height: 2px;
+    color: black;
+    border-width: 0px,
+}
+.all, .add{
+    margin-left: 700px;
+}
+.form{
+    margin-left: 300px;
+}
